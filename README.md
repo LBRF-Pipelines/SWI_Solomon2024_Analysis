@@ -4,7 +4,7 @@ This repository contains the supplemental material, data and analysis code for S
 
 ## Experiment Code
 
-The experiment code used to collect the data will be make available XX XXX, 2023.
+The experiment code used to collect the data will be make available September, 2023.
 
 ## Analysis Requirements
 
