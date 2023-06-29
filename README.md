@@ -38,4 +38,3 @@ source('./_Scripts/4_Modelling.R') # computes Bayesian models used to identify c
 Running the modelling script will run the import, analysis and descriptives scripts, so in most cases you just want to run the fifth line.
 
 The code is an exact copy used for the publication. Future commits will be made to optimize the code's performance.
-
