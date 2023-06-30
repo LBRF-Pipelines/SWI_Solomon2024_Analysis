@@ -138,7 +138,7 @@ altmod2 <- add_criterion(altmod2, "loo", moment_match = TRUE, reloo = TRUE)
 
 loo_compare(altmod, altmod1, altmod2) #altmod 1 is best
 
-res1 <- tibble(model_parameters(altmod1, ci = 0.95, ci_method = "hdi",
+res <- tibble(model_parameters(altmod1, ci = 0.95, ci_method = "hdi",
                                test = c("pd", "rope"),rope_ci = 0.95))
 
 altmod1_fitted <- ungroup(premodeldat) %>%
@@ -319,7 +319,7 @@ ME_MI10rocpre <- ggplot(altmod1roc_fitted,
   stat_summary(fun = function(x) mean(x), geom = "line", size = 1.5) +
   scale_linetype_manual(name = "Brick", 
                         values = c(Large = 'solid', Small = 'dotted')) +
-  scale_fill_manual(name = "Brick", values = alpha(c("grey40", "grey70"), 0.5)) +
+  scale_fill_manual(name = "Brick", values = alpha(c("grey20", "grey70"), 0.5)) +
   facet_wrap(~ group, ncol = 2) +
   xlab("Trial") +
   ylab("Maximum Load Force Rate (N/s)") +
