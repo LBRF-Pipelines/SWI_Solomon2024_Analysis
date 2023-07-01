@@ -20,7 +20,7 @@ install.packages(c("tidyverse", "gsignal", "slider", "brms", "tidybayes", "emmea
 
 ## Analysis Code Usage
 
-The raw data for the project can be found on the [Open Science Framework](https://osf.io/v45pq/). UPDATE THIS!
+The raw data for the project can be found on the [Open Science Framework](https://osf.io/ey398/).
 
 1. Extract the (`labview.zip`) in a created directory `SWI_Analysis/_Data/`.
 2. Download the (`SWI_datasheet.csv` & `masterlist.csv`) in the directory `SWI_Analysis/_Data/`.
