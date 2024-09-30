@@ -2,7 +2,7 @@
 
 #file I/O
 
-path <- "~/Documents/Dalhousie/PhD-Neuroscience/Comps/Comp #1 - David Westwood/Current Analysis"
+path <- "~/Documents/Dalhousie/PhD-Neuroscience/Comps/Comp #1 - David Westwood/SWI_Analysis"
 setwd(path)
 
 #### Requirements ####
@@ -207,3 +207,17 @@ goodtrialmax <- trialmax %>%
   filter(! db_id %in% c(badmaxdiffs$db_id)) %>%
   ungroup() %>%
   mutate(group = fct_recode(group, OE = "OE",`MI-10` = "MI", `MI-2` = "MI2"))
+
+#### Chronometry ####
+
+MC_timing <- exp_Bdat %>%
+  inner_join(partinfo, by = c("id"="db_id")) %>%
+  mutate(trials = (block_number-1)*10 + trials,
+    movement_type = case_when(group == "MI2" & trials > 2 & trials < 41 ~ "MI",
+                                   group =="MI" & trials > 10 & trials < 41 ~ "MI",
+                                   TRUE ~ "OE"),
+    id = as.factor(id)) %>%
+  filter(reaction_time != 9999) %>%
+  semi_join(goodtrialmax, by = c("id"="db_id", "trials" = "trial")) %>%
+  select(c(id, group, trials, movement_type, go_cue_time, 
+           movement_start_time, reaction_time))

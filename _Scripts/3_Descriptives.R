@@ -170,3 +170,27 @@ ggsave(filename = "ratings.eps",
        width = 40,
        height = 20,
        units = "cm")
+
+# Chronometry Plots
+
+timing <- ggplot(data = filter(MC_timing, movement_type=="MI"),
+                 aes(x = trials, y = reaction_time
+                     )) + 
+  stat_summary(fun = mean,
+               fun.min = function(Score) mean(Score) - sd(Score), 
+               fun.max = function(Score) mean(Score) + sd(Score), 
+               geom = "pointrange",
+               position = pd) +
+  xlab("Trial") +
+  ylab("Movement Duration (ms)") +
+  makinStuffPretty
+
+show(timing)
+
+ggsave(filename = "MI_timing.eps",
+       path = "./Vis/",
+       plot = timing,
+       dpi = 1200,
+       width = 40,
+       height = 20,
+       units = "cm")

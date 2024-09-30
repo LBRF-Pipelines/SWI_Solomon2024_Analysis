@@ -2,7 +2,7 @@
 
 #file I/O
 
-path <- "~/Documents/Dalhousie/PhD-Neuroscience/Comps/Comp #1 - David Westwood/Current Analysis"
+path <- "~/Documents/Dalhousie/PhD-Neuroscience/Comps/Comp #1 - David Westwood/SWI_Analysis"
 setwd(path)
 
 if(file.exists("Vis")){
@@ -58,3 +58,15 @@ taskdat <- map_df(raw.files, function(f) {
 
 colnames(taskdat) <- c('db_id', 'goggles', 'switch', 'EMG', 'FT1', 'FT2', 'FT3', 
                        'FT4', 'FT5', 'FT6')
+
+#import Experiment Builder Data
+exp_B.files <- dir('./_Data/Data R Comp', recursive = TRUE,
+                   full.names = TRUE, pattern="RESULTS_FILE.txt$")
+
+exp_Bdat <- map_df(exp_B.files, function(f) {
+  df <- read_delim(f, col_names = T, delim = '\t', col_types = 'ddddc') %>%
+    mutate(reaction_time=as.double(reaction_time),
+           id=as.double(str_sub(dirname(f), -3)), .before=1
+    )
+}) %>%
+  arrange(id,go_cue_time)
