@@ -1,0 +1,13 @@
+# OS_X
+.DS_Store
+
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Project_files
+*_Data/
+*Vis/
