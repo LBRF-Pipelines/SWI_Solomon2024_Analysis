@@ -102,7 +102,7 @@ altmod <- brm(model,
                 prior(exponential(1), class = sigma)
               ),
               iter = 10000,
-              chains = n_cores, cores = n_cores, 
+              chains = n_cores, cores = n_cores, seed = 64,
               control = list(adapt_delta = .99, max_treedepth = 20),
               save_pars = save_pars(all = TRUE)
 )
@@ -116,7 +116,7 @@ altmod1 <- brm(model1,
                  prior(exponential(1), class = sigma)
                ), 
                iter = 10000,
-               chains = n_cores, cores = n_cores, 
+               chains = n_cores, cores = n_cores, seed = 64,
                control = list(adapt_delta = .99, max_treedepth = 20),
                save_pars = save_pars(all = TRUE)
 )
@@ -130,7 +130,7 @@ altmod2 <- brm(model2,
                  prior(exponential(1), class = sigma)
                ),
                iter = 10000,
-               chains = n_cores, cores = n_cores, 
+               chains = n_cores, cores = n_cores, seed = 64,
                control = list(adapt_delta = .99, max_treedepth = 20),
                save_pars = save_pars(all = TRUE)
 )
@@ -196,7 +196,7 @@ altmodMI2 <- brm(modelMI2,
                    prior(exponential(1), class = sigma)
                  ),
                  iter = 10000,
-                 chains = n_cores, cores = n_cores, 
+                 chains = n_cores, cores = n_cores, seed = 64,
                  control = list(adapt_delta = .99, max_treedepth = 20),
                  save_pars = save_pars(all = TRUE)
 )
@@ -238,7 +238,7 @@ altmod1post <- brm(model1,
                      prior(exponential(1), class = sigma)
                    ),
                    iter = 10000,
-                   chains = n_cores, cores = n_cores, 
+                   chains = n_cores, cores = n_cores, seed = 64,
                    control = list(adapt_delta = .99, max_treedepth = 20),
                    save_pars = save_pars(all = TRUE)
 )
@@ -287,7 +287,7 @@ altmod1roc <- brm(model1roc,
                     prior(exponential(1), class = sigma)
                   ),
                   iter = 10000,
-                  chains = n_cores, cores = n_cores, 
+                  chains = n_cores, cores = n_cores, seed = 64,
                   control = list(adapt_delta = .99, max_treedepth = 20),
                   save_pars = save_pars(all = TRUE)
 )
@@ -349,7 +349,7 @@ altmodMI2roc <- brm(modelMI2roc,
                       prior(exponential(1), class = sigma)
                     ),
                     iter = 10000,
-                    chains = n_cores, cores = n_cores, 
+                    chains = n_cores, cores = n_cores, seed = 64,
                     control = list(adapt_delta = .99, max_treedepth = 20),
                     save_pars = save_pars(all = TRUE)
 )
@@ -390,7 +390,7 @@ altmod1rocpost <- brm(model1roc,
                         prior(exponential(1), class = sigma)
                       ),
                       iter = 10000,
-                      chains = n_cores, cores = n_cores, 
+                      chains = n_cores, cores = n_cores, seed = 64,
                       control = list(adapt_delta = .99, max_treedepth = 20),
                       save_pars = save_pars(all = TRUE)
 )
@@ -443,7 +443,7 @@ altmodRateMI <- brm(modelRate,
                       prior(exponential(1), class = sigma)
                     ),
                     iter = 10000,
-                    chains = n_cores, cores = n_cores, 
+                    chains = n_cores, cores = n_cores, seed = 64,
                     control = list(adapt_delta = .99, max_treedepth = 20),
                     save_pars = save_pars(all = TRUE)
 )
@@ -494,7 +494,7 @@ altmodRateME <- brm(modelRateME,
                       prior(exponential(1), class = sigma)
                     ),
                     iter = 10000,
-                    chains = n_cores, cores = n_cores, 
+                    chains = n_cores, cores = n_cores, seed = 64,
                     control = list(adapt_delta = .99, max_treedepth = 20),
                     save_pars = save_pars(all = TRUE)
 )
