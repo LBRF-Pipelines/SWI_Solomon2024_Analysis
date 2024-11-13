@@ -37,7 +37,7 @@ if(any(!exists('pd') & !exists('makinStuffPretty') & !exists('plot_colors3'))){
       panel.grid.minor = element_blank(),
       text = element_text(size = 22),
       axis.text = element_text(colour = "black", size = 22),
-      legend.title = element_text(size = 26),
+      legend.title = element_text(size = 22),
       axis.ticks = element_line(colour = "black", size = 1),
       legend.text = element_text(size = 22)
     )
@@ -169,6 +169,7 @@ ME_MI10pre <- ggplot(altmod1_fitted,
   facet_wrap(~ group, ncol = 2) +
   xlab("Trial") +
   ylab("Maximum Load Force (N)") +
+  scale_y_continuous(limits = c(0,15.5), expand = c(0, 0)) +
   labs(linetype = "Brick") +
   guides(fill = "none")+
   makinStuffPretty
@@ -176,12 +177,12 @@ ME_MI10pre <- ggplot(altmod1_fitted,
 
 show(ME_MI10pre)
 
-ggsave(filename = "ME_MI10pre.pdf", #.eps broken with transparency
+ggsave(filename = "Figure_5A.pdf", # The .eps filetype incorrectly interprets the transparency of the ribbons
        path = "./Vis/",
        plot = ME_MI10pre,
-       dpi = 1200,
-       width = 20,
-       height = 20,
+       dpi = 600,
+       width = 18,
+       height = 34.75,
        units = "cm")
 
 #in MI-2 group
@@ -215,16 +216,17 @@ MI2pre <- ggplot(group_mean_draws, aes(x = brick, y = maxFT3)) +
   stat_pointinterval(.width = c(0.6, 0.9), point_interval = median_hdi)+
   xlab("Brick Size") +
   ylab("Maximum Load Force (N)") +
+  scale_y_continuous(limits = c(0,15.5), expand = c(0, 0)) +
   makinStuffPretty
 
 show(MI2pre)
 
-ggsave(filename = "MI2pre.eps",
+ggsave(filename = "Figure_4A.eps",
        path = "./Vis/",
        plot = MI2pre,
-       dpi = 1200,
-       width = 15,
-       height = 20,
+       dpi = 600,
+       width = 18,
+       height = 36,
        units = "cm")
 
 
@@ -260,17 +262,18 @@ all_respost <- ggplot(group_mean_draws, aes(x = brick, y = maxFT3)) +
   facet_wrap(~ group, ncol = 3) +
   xlab("Brick Size") +
   ylab("Mean Maximum Force (N)") +
+  scale_y_continuous(limits = c(0, 9), expand = c(0, 0)) +
   makinStuffPretty
 
 
 show(all_respost)
 
-ggsave(filename = "all_respost.eps",
+ggsave(filename = "Figure_6.eps",
        path = "./Vis/",
        plot = all_respost,
-       dpi = 1200,
-       width = 20,
-       height = 20,
+       dpi = 600,
+       width = 18,
+       height = 18,
        units = "cm")
 
 #repeat for FT3maxROC
@@ -323,18 +326,19 @@ ME_MI10rocpre <- ggplot(altmod1roc_fitted,
   facet_wrap(~ group, ncol = 2) +
   xlab("Trial") +
   ylab("Maximum Load Force Rate (N/s)") +
+  scale_y_continuous(limits = c(0,85), expand = c(0, 0)) +
   labs(linetype = "Brick") +
   guides(fill = "none")+
   makinStuffPretty
 
 show(ME_MI10rocpre)
 
-ggsave(filename = "ME_MI10rocpre.pdf", #.eps broken with transparency
+ggsave(filename = "Figure_5B.pdf", #.eps broken with transparency
        path = "./Vis/",
        plot = ME_MI10rocpre,
-       dpi = 1200,
-       width = 20,
-       height = 20,
+       dpi = 600,
+       width = 18,
+       height = 34.75,
        units = "cm")
 
 #MI-2 pre
@@ -368,16 +372,17 @@ MI2preroc <- ggplot(roc_group_mean_draws, aes(x = brick, y = maxFT3)) +
   stat_pointinterval(.width = c(0.6, 0.9), point_interval = median_hdi)+
   xlab("Brick Size") +
   ylab("Maximum Load Force Rate (N/s)") +
+  scale_y_continuous(limits = c(0,85), expand = c(0, 0)) +
   makinStuffPretty
 
 show(MI2preroc)
 
-ggsave(filename = "MI2preROC.eps",
+ggsave(filename = "Figure_4B.eps",
        path = "./Vis/",
        plot = MI2preroc,
-       dpi = 1200,
-       width = 15,
-       height = 20,
+       dpi = 600,
+       width = 18,
+       height = 36,
        units = "cm")
 
 #what happens post training
@@ -469,16 +474,17 @@ Brick_MIrate <- ggplot(group_mean_rate_draws, aes(x = brick, y = rate)) +
                         labels = c("Large", "Small")) +
   scale_shape_discrete(name = "Group") +
   facet_wrap(~ type, ncol = 2) +
-  makinStuffPretty
+  makinStuffPretty +
+  guides(shape = guide_legend(override.aes = list(size = 6)))
 
 show(Brick_MIrate)
 
-ggsave(filename = "Brick_MIrate.eps",
+ggsave(filename = "Figure_2C.eps",
        path = "./Vis/",
        plot = Brick_MIrate,
-       dpi = 1200,
-       width = 20,
-       height = 20,
+       dpi = 600,
+       width = 18,
+       height = 18,
        units = "cm")
 
 #for ME
@@ -522,10 +528,10 @@ Brick_MErate <- ggplot(group_mean_rate_draws, aes(x = brick, y = rate)) +
 
 show(Brick_MErate)
 
-ggsave(filename = "Brick_MErate.eps",
+ggsave(filename = "Figure_2B.eps",
        path = "./Vis/",
        plot = Brick_MErate,
-       dpi = 1200,
-       width = 20,
-       height = 20,
+       dpi = 600,
+       width = 18,
+       height = 18,
        units = "cm")

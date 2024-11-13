@@ -32,7 +32,7 @@ makinStuffPretty <-   theme_classic() +
     panel.grid.minor = element_blank(),
     text = element_text(size = 22),
     axis.text = element_text(colour = "black", size = 22),
-    legend.title = element_text(size = 26),
+    legend.title = element_text(size = 22),
     axis.ticks = element_line(colour = "black", size = 1),
     legend.text = element_text(size = 22)
   )
@@ -81,12 +81,12 @@ lift_1 <- ggplot(data = filter(goodtrialmax, even_trial==1),
 
 show(lift_1)
 
-ggsave(filename = "lift_1.eps",
+ggsave(filename = "Supporting_Information_Figure_1.eps",
        path = "./Vis/",
        plot = lift_1,
-       dpi = 1200,
-       width = 15,
-       height = 20,
+       dpi = 600,
+       width = 13.5,
+       height = 18,
        units = "cm")
 
 #max of FT3
@@ -106,12 +106,12 @@ FT3 <- ggplot(data = goodtrialmax,
 
 show(FT3)
 
-ggsave(filename = "FT3_max.eps",
+ggsave(filename = "Figure_3A.eps",
        path = "./Vis/",
        plot = FT3,
-       dpi = 1200,
-       width = 20,
-       height = 20,
+       dpi = 600,
+       width = 18,
+       height = 36,
        units = "cm")
 
 #max of FT3roc
@@ -133,12 +133,12 @@ FT3roc <- ggplot(data = goodtrialmax,
 
 show(FT3roc)
 
-ggsave(filename = "FT3roc_max.eps",
+ggsave(filename = "Figure_3B.eps",
        path = "./Vis/",
        plot = FT3roc,
-       dpi = 1200,
-       width = 20,
-       height = 20,
+       dpi = 600,
+       width = 18,
+       height = 36,
        units = "cm")
 
 #Plot ratings
@@ -163,12 +163,12 @@ ratings <- ggplot(data = goodtrialmax,
 
 show(ratings)
 
-ggsave(filename = "ratings.eps",
+ggsave(filename = "Figure_2A.eps",
        path = "./Vis/",
        plot = ratings,
-       dpi = 1200,
-       width = 40,
-       height = 20,
+       dpi = 600,
+       width = 36,
+       height = 18,
        units = "cm")
 
 # Chronometry Plots
@@ -187,10 +187,10 @@ timing <- ggplot(data = filter(MC_timing, movement_type=="MI"),
 
 show(timing)
 
-ggsave(filename = "MI_timing.eps",
+ggsave(filename = "Supporting_Information_Figure_2.eps",
        path = "./Vis/",
        plot = timing,
-       dpi = 1200,
-       width = 40,
-       height = 20,
+       dpi = 600,
+       width = 18,
+       height = 12,
        units = "cm")
