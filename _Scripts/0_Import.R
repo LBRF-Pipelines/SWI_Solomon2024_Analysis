@@ -60,7 +60,7 @@ colnames(taskdat) <- c('db_id', 'goggles', 'switch', 'EMG', 'FT1', 'FT2', 'FT3',
                        'FT4', 'FT5', 'FT6')
 
 #import Experiment Builder Data
-exp_B.files <- dir('./_Data/Data R Comp', recursive = TRUE,
+exp_B.files <- dir('./_Data/exp_B', recursive = TRUE,
                    full.names = TRUE, pattern="RESULTS_FILE.txt$")
 
 exp_Bdat <- map_df(exp_B.files, function(f) {
