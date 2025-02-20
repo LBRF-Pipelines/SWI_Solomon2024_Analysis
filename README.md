@@ -1,10 +1,10 @@
-# SWI_Solomon2023_Analysis
+# SWI_Solomon2024_Analysis
 
-This repository contains the supplemental material, data and analysis code for Solomon et al. 2023 examining the reliance of motor imagery on perceptual and motor systems using the size weight illusion.
+This repository contains the supplemental material, data and analysis code for Solomon et al. 2024 examining the reliance of motor imagery on perceptual and motor systems using the size weight illusion.
 
 ## Experiment Code
 
-The experiment code used to collect the data will be make available September, 2023.
+The experiment code used to collect the data will be make available December, 2024.
 
 ## Analysis Requirements
 
@@ -22,7 +22,7 @@ install.packages(c("tidyverse", "gsignal", "slider", "brms", "tidybayes", "emmea
 
 The raw data for the project can be found on the [Open Science Framework](https://osf.io/ey398/).
 
-1. Extract the (`labview.zip`) in a created directory `SWI_Analysis/_Data/`.
+1. Extract the (`labview.zip` and `exb_B.zip`) in a created directory `SWI_Analysis/_Data/`.
 2. Download the (`SWI_datasheet.csv` & `masterlist.csv`) in the directory `SWI_Analysis/_Data/`.
 3. Open a new R session and set the working directory to the root `SWI_Analysis/` folder (or whatever you've renamed it to) using `setwd()` or the RStudio menu.
 4. Run one of the following commands in the R terminal:
