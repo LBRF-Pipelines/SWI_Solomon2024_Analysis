@@ -479,7 +479,7 @@ Brick_MIrate <- ggplot(group_mean_rate_draws, aes(x = brick, y = rate)) +
 
 show(Brick_MIrate)
 
-ggsave(filename = "Figure_2C.eps",
+ggsave(filename = "Supporting_Information_Figure_1B.eps",
        path = "./Vis/",
        plot = Brick_MIrate,
        dpi = 600,
@@ -528,7 +528,7 @@ Brick_MErate <- ggplot(group_mean_rate_draws, aes(x = brick, y = rate)) +
 
 show(Brick_MErate)
 
-ggsave(filename = "Figure_2B.eps",
+ggsave(filename = "Supporting_Information_Figure_1A.eps",
        path = "./Vis/",
        plot = Brick_MErate,
        dpi = 600,
