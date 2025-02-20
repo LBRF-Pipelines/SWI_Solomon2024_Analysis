@@ -1,10 +1,10 @@
 # SWI_Solomon2024_Analysis
 
-This repository contains the supplemental material, data and analysis code for Solomon et al. 2024 examining the reliance of motor imagery on perceptual and motor systems using the size weight illusion.
+This repository contains the supplemental material, data and analysis code for Solomon et al. 2025 examining the reliance of motor imagery on perceptual and motor systems using the size weight illusion.
 
 ## Experiment Code
 
-The experiment code used to collect the data will be make available December, 2024.
+The experiment code used to collect the data will be make available December, 2025.
 
 ## Analysis Requirements
 
