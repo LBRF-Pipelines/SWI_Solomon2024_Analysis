@@ -81,7 +81,7 @@ lift_1 <- ggplot(data = filter(goodtrialmax, even_trial==1),
 
 show(lift_1)
 
-ggsave(filename = "Supporting_Information_Figure_2.eps",
+ggsave(filename = "SupportingInformationFigure2.eps",
        path = "./Vis/",
        plot = lift_1,
        dpi = 600,
@@ -106,7 +106,7 @@ FT3 <- ggplot(data = goodtrialmax,
 
 show(FT3)
 
-ggsave(filename = "Figure_3A.eps",
+ggsave(filename = "Figure3A.eps",
        path = "./Vis/",
        plot = FT3,
        dpi = 600,
@@ -133,7 +133,7 @@ FT3roc <- ggplot(data = goodtrialmax,
 
 show(FT3roc)
 
-ggsave(filename = "Figure_3B.eps",
+ggsave(filename = "Figure3B.eps",
        path = "./Vis/",
        plot = FT3roc,
        dpi = 600,
@@ -163,7 +163,7 @@ ratings <- ggplot(data = goodtrialmax,
 
 show(ratings)
 
-ggsave(filename = "Figure_2.eps",
+ggsave(filename = "Figure2.eps",
        path = "./Vis/",
        plot = ratings,
        dpi = 600,
@@ -187,7 +187,7 @@ timing <- ggplot(data = filter(MC_timing, movement_type=="MI"),
 
 show(timing)
 
-ggsave(filename = "Supporting_Information_Figure_3.eps",
+ggsave(filename = "SupportingInformationFigure3.eps",
        path = "./Vis/",
        plot = timing,
        dpi = 600,
