@@ -272,8 +272,8 @@ ggsave(filename = "Figure6.eps",
        path = "./Vis/",
        plot = all_respost,
        dpi = 600,
-       width = 18,
-       height = 18,
+       width = 8,
+       height = 8,
        units = "cm")
 
 #repeat for FT3maxROC
