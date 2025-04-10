@@ -177,7 +177,7 @@ ME_MI10pre <- ggplot(altmod1_fitted,
 
 show(ME_MI10pre)
 
-ggsave(filename = "Figure_5A.pdf", # The .eps filetype incorrectly interprets the transparency of the ribbons
+ggsave(filename = "Figure5A.pdf", # The .eps filetype incorrectly interprets the transparency of the ribbons
        path = "./Vis/",
        plot = ME_MI10pre,
        dpi = 600,
@@ -221,7 +221,7 @@ MI2pre <- ggplot(group_mean_draws, aes(x = brick, y = maxFT3)) +
 
 show(MI2pre)
 
-ggsave(filename = "Figure_4A.eps",
+ggsave(filename = "Figure4A.eps",
        path = "./Vis/",
        plot = MI2pre,
        dpi = 600,
@@ -268,7 +268,7 @@ all_respost <- ggplot(group_mean_draws, aes(x = brick, y = maxFT3)) +
 
 show(all_respost)
 
-ggsave(filename = "Figure_6.eps",
+ggsave(filename = "Figure6.eps",
        path = "./Vis/",
        plot = all_respost,
        dpi = 600,
@@ -333,7 +333,7 @@ ME_MI10rocpre <- ggplot(altmod1roc_fitted,
 
 show(ME_MI10rocpre)
 
-ggsave(filename = "Figure_5B.pdf", #.eps broken with transparency
+ggsave(filename = "Figure5B.pdf", #.eps broken with transparency
        path = "./Vis/",
        plot = ME_MI10rocpre,
        dpi = 600,
@@ -377,7 +377,7 @@ MI2preroc <- ggplot(roc_group_mean_draws, aes(x = brick, y = maxFT3)) +
 
 show(MI2preroc)
 
-ggsave(filename = "Figure_4B.eps",
+ggsave(filename = "Figure4B.eps",
        path = "./Vis/",
        plot = MI2preroc,
        dpi = 600,
@@ -479,7 +479,7 @@ Brick_MIrate <- ggplot(group_mean_rate_draws, aes(x = brick, y = rate)) +
 
 show(Brick_MIrate)
 
-ggsave(filename = "Supporting_Information_Figure_1B.eps",
+ggsave(filename = "SupportingInformationFigure1B.eps",
        path = "./Vis/",
        plot = Brick_MIrate,
        dpi = 600,
@@ -528,7 +528,7 @@ Brick_MErate <- ggplot(group_mean_rate_draws, aes(x = brick, y = rate)) +
 
 show(Brick_MErate)
 
-ggsave(filename = "Supporting_Information_Figure_1A.eps",
+ggsave(filename = "SupportingInformationFigure1A.eps",
        path = "./Vis/",
        plot = Brick_MErate,
        dpi = 600,
